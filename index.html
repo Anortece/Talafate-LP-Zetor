@@ -684,125 +684,123 @@ O motor de quatro cilindros, com potência máxima de até 171 cavalos, confere 
   <!-- ║               CONTACTO                  ║ -->
   <!-- ╚══════════════════════════════════════════╝ -->
   <section id="contacto" class="py-24 bg-[#f9f9f9]">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-      <div class="text-center mb-14" data-aos="fade-up">
-        <span class="section-tag text-zetor">Hablemos</span>
-        <h2 class="text-navy font-black text-4xl md:text-5xl mt-3 mb-4">Solicitar Presupuesto</h2>
-        <p class="text-gray-500 font-300 max-w-xl mx-auto">
-          Completá el formulario y un asesor de Talafate se comunicará dentro de las 24 hs hábiles.
-        </p>
-        <div class="w-16 h-1 bg-zetor mx-auto mt-6 rounded-full"></div>
-      </div>
+    <div class="text-center mb-14" data-aos="fade-up">
+      <span class="section-tag text-zetor">Hablemos</span>
+      <h2 class="text-navy font-black text-4xl md:text-5xl mt-3 mb-4">Solicitar Presupuesto</h2>
+      <p class="text-gray-500 font-300 max-w-xl mx-auto">
+        Completá el formulario y un asesor de Talafate se comunicará dentro de las 24 hs hábiles.
+      </p>
+      <div class="w-16 h-1 bg-zetor mx-auto mt-6 rounded-full"></div>
+    </div>
 
-      <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12">
+    <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12">
+        
+        <!-- INÍCIO DO FORMULÁRIO -->
+        <form id="form-talafate">
+          <!-- Configurações Web3Forms -->
+          <input type="hidden" name="access_key" value="3c744897-3ce9-4277-8d85-6b828b33e3dd">
+          <input type="hidden" name="subject" value="Nuevo Lead - Landing Page Talafate">
+          <input type="hidden" name="from_name" value="Zetor Talafate">
+
           <div class="grid md:grid-cols-2 gap-6">
 
             <div>
               <label class="block text-navy font-600 text-xs uppercase tracking-widest mb-2">Nombre y Apellido *</label>
-              <input type="text" placeholder="Ej: Juan Rodríguez"
+              <input type="text" name="nombre" placeholder="Ej: Juan Rodríguez" required
                 class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-700 placeholder-gray-300 transition-all" />
             </div>
 
-          
-
             <div>
               <label class="block text-navy font-600 text-xs uppercase tracking-widest mb-2">Email *</label>
-              <input type="email" placeholder="correo@ejemplo.com"
+              <input type="email" name="email" placeholder="correo@ejemplo.com" required
                 class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-700 placeholder-gray-300 transition-all" />
             </div>
 
             <div class="space-y-2">
-  <label class="block text-navy font-600 text-xs uppercase tracking-widest mb-2">Teléfono / País</label>
-  
-<div class="w-full">
-  
-  <div class="flex shadow-sm h-[48px]">
-    <div class="relative min-w-[130px]">
-      <select 
-        id="pais-selector"
-        onchange="mudarBandeira(this)"
-        class="w-full h-full border border-gray-200 rounded-l-lg pl-11 pr-8 py-2 text-sm text-gray-700 bg-white appearance-none focus:outline-none focus:ring-1 focus:ring-zetor focus:border-zetor transition-all cursor-pointer"
-      >
-        <option value="" disabled selected>País</option>
-      </select>
-      
-      <div class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none flex items-center">
-        <img id="bandeira-dinamica" src="https://flagcdn.com/w40/ar.png" class="w-6 h-auto shadow-sm rounded-sm" alt="bandeira">
-      </div>
+              <label class="block text-navy font-600 text-xs uppercase tracking-widest mb-2">Teléfono / País</label>
+              <div class="w-full">
+                <div class="flex shadow-sm h-[48px]">
+                  <div class="relative min-w-[130px]">
+                    <!-- O name="pais" será capturado pelo JS -->
+                    <select id="pais-selector" name="pais" onchange="mudarBandeira(this)"
+                      class="w-full h-full border border-gray-200 rounded-l-lg pl-11 pr-8 py-2 text-sm text-gray-700 bg-white appearance-none focus:outline-none focus:ring-1 focus:ring-zetor focus:border-zetor transition-all cursor-pointer">
+                      <option value="" disabled selected>País</option>
+                    </select>
+                    
+                    <div class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none flex items-center">
+                      <img id="bandeira-dinamica" src="https://flagcdn.com/w40/ar.png" class="w-6 h-auto shadow-sm rounded-sm" alt="bandeira">
+                    </div>
 
-      <div class="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-      </div>
-    </div>
+                    <div class="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </div>
+                  </div>
 
-    <input 
-      type="tel" 
-      placeholder="Número de teléfono" 
-      class="flex-1 ml-3 border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-700 placeholder-gray-300 focus:outline-none focus:ring-1 focus:ring-zetor transition-all"
-    >
-  </div>
-</div>
+                  <input type="tel" name="telefono" placeholder="Número de teléfono" required
+                    class="flex-1 ml-3 border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-700 placeholder-gray-300 focus:outline-none focus:ring-1 focus:ring-zetor transition-all">
+                </div>
+              </div>
+            </div>
 
-  
-  </div>
-</div>
-<br>
-            <div class="md:col-span-2">
+            <div class="md:col-span-2 mt-4">
               <label class="block text-navy font-600 text-xs uppercase tracking-widest mb-2">Modelo de interés</label>
               <div class="flex flex-wrap gap-3">
                 <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="accent-navy w-4 h-4" />
+                  <input type="checkbox" name="modelos" value="Crystal" class="accent-navy w-4 h-4" />
                   <span class="text-sm text-gray-600 font-500">Crystal</span>
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="accent-navy w-4 h-4" />
+                  <input type="checkbox" name="modelos" value="Forterra" class="accent-navy w-4 h-4" />
                   <span class="text-sm text-gray-600 font-500">Forterra</span>
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="accent-navy w-4 h-4" />
+                  <input type="checkbox" name="modelos" value="Proxima" class="accent-navy w-4 h-4" />
                   <span class="text-sm text-gray-600 font-500">Proxima</span>
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="accent-navy w-4 h-4" />
+                  <input type="checkbox" name="modelos" value="Major" class="accent-navy w-4 h-4" />
                   <span class="text-sm text-gray-600 font-500">Major</span>
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="accent-navy w-4 h-4" />
+                  <input type="checkbox" name="modelos" value="Compax" class="accent-navy w-4 h-4" />
                   <span class="text-sm text-gray-600 font-500">Compax</span>
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="accent-navy w-4 h-4" />
+                  <input type="checkbox" name="modelos" value="Série 6" class="accent-navy w-4 h-4" />
                   <span class="text-sm text-gray-600 font-500">Série 6</span>
                 </label>
               </div>
             </div>
 
-            <br>
-            <div class="md:col-span-2">
+            <div class="md:col-span-2 mt-4">
               <label class="block text-navy font-600 text-xs uppercase tracking-widest mb-2">Mensaje</label>
-              <textarea rows="4" placeholder="Contanos sobre tu campo y qué necesitás..."
+              <textarea name="mensaje" rows="4" placeholder="Contanos sobre tu campo y qué necesitás..."
                 class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-700 placeholder-gray-300 resize-none transition-all"></textarea>
             </div>
 
           </div>
 
           <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
-            <button type="button"
+            <button type="submit"
               class="w-full sm:w-auto bg-zetor hover:bg-zetorD text-white font-700 px-10 py-4 rounded text-sm uppercase tracking-widest transition-all duration-200 shadow-lg hover:shadow-zetor/30">
               Enviar Solicitud
             </button>
-            <p class="text-gray-400 text-xs font-400 text-center sm:text-left">
-              Al enviar aceptás nuestra política de privacidad. Tu información nunca es compartida con terceros.
+            <p id="msg-status" class="text-gray-400 text-xs font-400 text-center sm:text-left">
+              Al enviar aceptás nuestra política de privacidad.
             </p>
           </div>
 
-        </div>
-      </div>
+        </form>
+        <!-- FIM DO FORMULÁRIO -->
 
+      </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- ╔══════════════════════════════════════════╗ -->
   <!-- ║                FOOTER                   ║ -->
@@ -896,7 +894,6 @@ O motor de quatro cilindros, com potência máxima de até 171 cavalos, confere 
   const sideMenu = document.getElementById('side-menu-container');
   const sideOverlay = document.getElementById('side-menu-overlay');
   
-  // Elementos do Seletor de Países
   const selectPais = document.getElementById('pais-selector');
   const imgBandeira = document.getElementById('bandeira-dinamica');
 
@@ -940,25 +937,20 @@ O motor de quatro cilindros, com potência máxima de até 171 cavalos, confere 
     if (!selectPais) return;
 
     try {
-      // Busca a lista completa de todos os países do mundo
       const response = await fetch('https://restcountries.com/v3.1/all?fields=name,idd,cca2,translations');
       const dados = await response.json();
 
-      // Ordena alfabeticamente pelo nome em espanhol (preferencial) ou comum
       const paisesOrdenados = dados.sort((a, b) => {
         const nomeA = a.translations.spa?.common || a.name.common;
         const nomeB = b.translations.spa?.common || b.name.common;
         return nomeA.localeCompare(nomeB);
       });
 
-      selectPais.innerHTML = ''; // Limpa o select
+      selectPais.innerHTML = '<option value="" disabled>País</option>'; 
 
       paisesOrdenados.forEach(pais => {
-        // Verifica se o país possui código de discagem (IDD)
         if (pais.idd && pais.idd.root) {
           const option = document.createElement('option');
-          
-          // Constrói o código (Ex: +54, +1, etc)
           const prefixo = pais.idd.root;
           const sufixo = (pais.idd.suffixes && pais.idd.suffixes.length === 1) ? pais.idd.suffixes[0] : "";
           const codigoFinal = prefixo + sufixo;
@@ -966,18 +958,16 @@ O motor de quatro cilindros, com potência máxima de até 171 cavalos, confere 
           const iso2 = pais.cca2.toLowerCase(); 
           const nomeExibicao = pais.translations.spa?.common || pais.name.common;
           
-          option.value = codigoFinal;
+          option.value = nomeExibicao; 
           option.setAttribute('data-flag', iso2);
+          option.setAttribute('data-code', codigoFinal);
           option.textContent = `${nomeExibicao} (${codigoFinal})`;
           
-          // Define Argentina como padrão inicial
           if (iso2 === 'ar') option.selected = true;
-          
           selectPais.appendChild(option);
         }
       });
 
-      // Atualiza a bandeira para o país selecionado inicialmente (Argentina)
       mudarBandeira(selectPais);
 
     } catch (error) {
@@ -985,7 +975,6 @@ O motor de quatro cilindros, com potência máxima de até 171 cavalos, confere 
     }
   }
 
-  // Função que atualiza o SRC da imagem baseado no atributo data-flag
   function mudarBandeira(select) {
     if (select && imgBandeira) {
       const selectedOption = select.options[select.selectedIndex];
@@ -996,7 +985,71 @@ O motor de quatro cilindros, com potência máxima de até 171 cavalos, confere 
     }
   }
 
-  // Inicia o carregamento dos países ao abrir a página
+  // 6. Lógica de Envio Web3Forms
+  const formTalafate = document.getElementById('form-talafate');
+  
+  if (formTalafate) {
+    formTalafate.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const btnSubmit = formTalafate.querySelector('button[type="submit"]');
+      const originalBtnText = btnSubmit.innerText;
+      
+      btnSubmit.disabled = true;
+      btnSubmit.innerText = 'ENVIANDO...';
+
+      // Capturar os modelos selecionados
+      const modelosChecked = [];
+      formTalafate.querySelectorAll('input[name="modelos"]:checked').forEach(checkbox => {
+        modelosChecked.push(checkbox.value);
+      });
+
+      const formData = new FormData(formTalafate);
+      
+      // Ajuste importante: removemos o nome repetido para o e-mail não ir confuso
+      formData.delete('modelos'); 
+      if (modelosChecked.length > 0) {
+        formData.append('modelos_interes', modelosChecked.join(', '));
+      }
+
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+      .then(async (response) => {
+        let result = await response.json();
+        if (response.status === 200) {
+          alert('¡Solicitud enviada con éxito! Nos comunicaremos pronto.');
+          formTalafate.reset();
+          // Forçamos a volta para Argentina após o reset
+          if (selectPais) {
+             for(let i=0; i<selectPais.options.length; i++){
+                if(selectPais.options[i].getAttribute('data-flag') === 'ar') selectPais.selectedIndex = i;
+             }
+             mudarBandeira(selectPais);
+          }
+        } else {
+          alert('Error: ' + result.message);
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        alert('Hubo un error al enviar el formulario. Intente nuevamente.');
+      })
+      .finally(() => {
+        btnSubmit.disabled = false;
+        btnSubmit.innerText = originalBtnText;
+      });
+    });
+  }
+
   carregarPaises();
 </script>
 
